@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Bookshelf Apps" />
+        <title>Bookshelf Apps</title>
+        <link rel="stylesheet" href="assets/style/style.css" />
+    </head>
+    <body>
+        <!-- The Navbar grid (content) -->
+        <nav class="nav container">
+            <span class="nav-title">Bookshelf Apps</span>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#searchBox" class="nav-link">Search</a></li>
+            </ul>
+        </nav>
+
+        <!-- The flexible grid (content) -->
+        <div class="flex-container">
+            <div class="left-side">
+                <div class="main-img">
+                    <img src="assets/img/bookshelf-img.png" alt="background" width="100%" style="margin: 0 auto" />
+                </div>
+            </div>
+            <div class="main">
+                <div class="addbook-container">
+                    <h1>Input Buku Baru</h1>
+                    <form action="#" id="form">
+                        <div class="input-container">
+                            <div class="input-group">
+                                <input type="text" id="title" required class="input" />
+                                <label for="title" class="input-label">Judul</label>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <input type="text" id="author" required class="input" />
+                                <label for="author" class="input-label">Penulis</label>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <input type="number" id="year" required class="input" />
+                                <label for="year" class="input-label">Tahun</label>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <input type="text" id="category" required class="input" />
+                                <label for="category" class="input-label">Kategori</label>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div class="input-group">
+                                <input type="text" id="cover" required class="input" />
+                                <label for="cover" class="input-label">Link Cover Buku</label>
+                            </div>
+                        </div>
+                        <div class="input_inline">
+                            <label for="inputBookIsComplete">Selesai dibaca</label>
+                            <input id="inputBookIsComplete" type="checkbox" />
+                        </div>
+                        <button id="bookSubmit" type="submit">Simpan Data Buku</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- The flexible grid ( BOOK LIST) -->
+
+        <div class="flex-container book-container">
+            <!-- search -->
+            <div class="book-flex">
+                <section class="book_shelf">
+                    <div class="search-contain">
+                        <h2>Cari Buku</h2>
+                        <div class="search-logo">
+                            <input type="text" id="searchBox" placeholder="Masukan Judul Buku" required />
+                        </div>
+                    </div>
+
+                    <div id="searchBookshelfList" class="book_list">
+                        <!-- place content here -->
+                    </div>
+                </section>
+            </div>
+            <!-- end-search -->
+
+            <div class="book-flex">
+                <section class="book_shelf">
+                    <h2>Selesai Dibaca</h2>
+                    <div id="completeBookshelfList" class="book_list">
+                        <!-- place content here -->
+                    </div>
+                </section>
+            </div>
+
+            <div class="book-flex">
+                <section class="book_shelf">
+                    <h2>Belum Selesai Dibaca</h2>
+                    <div id="incompleteBookshelfList" class="book_list">
+                        <!-- place content here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                Bookshelf Apps | created by
+                <a href="https://www.instagram.com/adeiskandarzulkarnaen/">adeiskandarzulkarnaen</a> | dicoding
+                submission
+            </p>
+        </div>
+        <script src="assets/js/script.js" type="text/javascript"></script>
+    </body>
+</html>
