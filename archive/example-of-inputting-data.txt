@@ -1,0 +1,24 @@
+
+an example of inputting data into a form
+
+/* ================================ [ 1st book ] =========================================*/
+
+judul 	    : Habis Gelap Terbitlah Terang
+Penulis	    : R.A. Kartini
+Tahun Pub.  : 1911
+Kategori    : Pendidikan
+link-cover  : https://www.bukukita.com/babacms/displaybuku/103994_f.jpg
+
+
+/* =============================== [ 2nd book ] =========================================*/
+
+judul 	    : Software Engineering
+Penulis	    : Roger S. Pressman
+Tahun Pub.  : 2011
+Kategori    : Teknologi
+link-cover  : https://lh3.googleusercontent.com/pw/AL9nZEX1slr6MwVUER7XY0o4QBXMLSokqjBFQRd5Mg1UAukb4zMufyRtunvElbPtDP5dJfLnA59TQFIfs6Da4WqdbkqqUTty9VO9wbP1GEQfevqmfONQp44wK6ZPmKRloMjTG00jC3NauyaoYhBdbmpPGWk=w424-h539-no?authuser=2
+
+
+------
+
+
