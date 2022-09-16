@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+:root {
+    --primary-color: #605e87;
+    --secondary-color: #8180a2;
+    --tertiary-color: #2423297c;
+    --button-color: rgba(100, 148, 237, 0.801);
+    --additional-col1: rgba(233, 66, 37, 0.849);
+    --additional-color2: #5dd782;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    margin: 0 auto;
+
+    font-family: "Poppins", sans-serif;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* =========================================================================== */
+/* ============================== [ navbar CSS ] ============================= */
+/* =========================================================================== */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+    padding-inline: 3%;
+}
+
+.nav-title {
+    font-size: x-large;
+    color: #fff;
+    padding-left: 1%;
+}
+
+.nav-list {
+    padding-right: 2%;
+    list-style: none;
+    display: flex;
+    column-gap: 12px;
+}
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* =========================================================================== */
+/* =============================== [ Body CSS ] ============================== */
+/* =========================================================================== */
+
+/* Column container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar left column */
+.left-side {
+    flex: 60%;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 40%;
+    padding: 20px;
+}
+
+.main-img {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: black;
+}
+
+.footer > p > a {
+    text-decoration: none;
+    color: var(--additional-color2);
+}
+
+.footer > p > a:hover {
+    font-weight: bold;
+}
+
+/* Responsive layout - when the screen is less than 700px wide... */
+@media screen and (max-width: 700px) {
+    .flex-container,
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+/* =========================================================================== */
+/* =============================== [ Form CSS ] ============================== */
+/* =========================================================================== */
+
+.addbook-container {
+    font-size: medium;
+
+    padding: 20px 5px;
+    border-radius: 25px;
+    margin: 0 auto;
+
+    background-color: var(--tertiary-color);
+    display: grid;
+    place-items: center;
+}
+
+.input-container {
+    margin-top: 2px;
+    padding-top: 30px !important;
+    padding: 4px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: #fff;
+    background-color: transparent;
+    outline: 2px solid #fff;
+}
+
+.input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transform-origin: left;
+    transition: transform 0.25s;
+}
+
+.input:focus ~ .input-label,
+.input:valid ~ .input-label {
+    transform: translate(0, -30px) scale(0.8);
+    color: #d1c5fc;
+}
+
+.input:is(:focus, :valid) {
+    outline-color: #d1c5fc;
+}
+
+/* ======================== */
+
+.input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    font-size: medium;
+    background-color: var(--additional-color2);
+    color: white;
+    border: 1px solid var(--additional-color2);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-color);
+    border: 1px dotted black;
+}
+
+form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+form > .input_inline > label {
+    /* font-weight: bold; */
+    margin-right: 10px;
+}
+
+/* form flex ratio */
+@media screen and (min-width: 701px) and (max-width: 940px) {
+    .left-side,
+    .main {
+        flex: 50%;
+    }
+
+    .addbook-container {
+        font-size: small;
+        padding: 10px 5px;
+    }
+    .input-container {
+        margin-top: 2px;
+        padding-top: 15px !important;
+        padding: 4px;
+    }
+
+    .input:focus ~ .input-label,
+    .input:valid ~ .input-label {
+        transform: translate(0, -20px) scale(0.8);
+    }
+}
+
+/* =========================================================================== */
+/* ============================= [ BookList CSS ] ============================ */
+/* =========================================================================== */
+
+.book-container {
+    background-color: transparent;
+}
+
+.book-flex {
+    flex-grow: 1;
+}
+
+.book_shelf {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: var(--tertiary-color);
+}
+
+.book_shelf > h2,
+.search-contain > h2 {
+    color: inherit;
+    font-size: large;
+}
+
+.book_shelf > .book_list {
+    margin: 0;
+    /* padding: 16px; */
+}
+
+.book_shelf > .book_list > .book_item {
+    position: relative;
+    background-color: var(--secondary-color);
+    padding: 8px 16px 16px 16px;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > img {
+    float: left;
+    width: 120px;
+    height: 165px;
+    border-radius: 12px;
+    margin: 0 20px 0 0;
+    border: 1px dotted black;
+}
+
+.book_shelf > .book_list > .book_item > .desc {
+    float: left;
+    line-height: 1.2;
+    max-width: 230px;
+    margin: 7px 0 0 0;
+}
+
+.book_shelf > .book_list > .book_item > .action {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.book_shelf > .book_list > .book_item > .clear {
+    clear: left;
+}
+
+.book_shelf > .book_list > .book_item > .desc > p {
+    margin: 3px;
+    /* line-height: 1.6; */
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    /* display: inline; */
+    width: 42px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* form flex ratio */
+@media screen and (min-width: 330px) and (max-width: 500px) {
+    .book_shelf > .book_list > .book_item > .action > button {
+        display: inline;
+        width: 40px;
+        padding: 5px;
+        margin: 3px;
+    }
+}
+
+@media screen and (max-width: 329px) {
+    .book_shelf > .book_list > .book_item > .action {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .book_shelf > .book_list > .book_item > .action > button {
+        width: 40px;
+        padding: 5px;
+        margin: 5px;
+    }
+}
+
+/* =========================================================================== */
+/* ============================== [ Search CSS ] ============================= */
+/* =========================================================================== */
+
+.search-contain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-logo {
+    display: inline-block;
+
+    position: relative;
+    top: 12px;
+}
+
+.search-logo:after {
+    content: "";
+    background: white;
+
+    /* atribut search */
+    width: 3px;
+    height: 12px;
+
+    /* pajang search logo */
+    position: absolute;
+    top: 21px;
+    right: 0px;
+    transform: rotate(135deg);
+}
+
+.search-logo > input {
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 12px;
+    color: white;
+
+    /* circle of search */
+    border: 2px solid white;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.7s;
+}
+
+.search-logo > input::placeholder {
+    color: white;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+.search-logo > input:focus::placeholder {
+    opacity: 1;
+}
+
+.search-logo > input:focus,
+.search-logo > input:not(:placeholder-shown) {
+    width: 230px;
+}
+
+@media screen and (max-width: 536px) {
+    .search-logo > input:focus,
+    .search-logo > input:not(:placeholder-shown) {
+        width: 120px;
+    }
+}
