@@ -1,0 +1,32 @@
+
+/* =======================[ bookObject ]==========================*/
+
+const book = {
+    "id": 1663258191640,
+    "title": "Habis Gelap Terbitlah Terang",
+    "author": "R.A. Kartini",
+    "category": "Pendidikan",
+    "yearOfPublication": "1911",
+    "coverbookLink": "https://www.bukukita.com/babacms/displaybuku/103994_f.jpg",
+    "completedReading": false
+}
+
+
+/* =======================[ bookStructure ]=========================*/
+
+<article class="book_item" id="book-1663258191640">
+    <img src="https://www.bukukita.com/babacms/displaybuku/103994_f.jpg" alt="cover" />
+    <div class="desc">
+        <p><strong>Habis Gelap Terbitlah Terang</strong></p>
+        <br />
+        <p>R.A. Kartini</p>
+        <p>Pendidikan</p>
+        <p>1911</p>
+    </div>
+    <div class="action">
+        <button><img src="assets/img/icon/checkmark-16.png" alt="read" /></button>
+        <button><img src="assets/img/icon/edit-16.png" alt="edit" /></button>
+        <button><img src="assets/img/icon/bin-16.png" alt="delete" /></button>
+    </div>
+    <div class="clear"></div>
+</article>
